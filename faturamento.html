@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+    <title>Faturamento – EcoBola</title>
+    <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@400;600;800&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <script>try { var t = localStorage.getItem("eb-theme"); if (t) document.documentElement.dataset.theme = t } catch (e) { }</script>
+</head>
+
+<body>
+    <div id="site-header"></div>
+    <main>
+        <section id="faturamento">
+            <h1>Faturamento projetado</h1>
+            <p>Projeção do primeiro ano com crescimento gradual de coletas e vendas. Números ilustrativos para o plano
+                de negócios.</p>
+            <div class="chart">
+                <h3>Receita mensal (R$ mil)</h3>
+                <div id="c-fat"></div>
+            </div>
+            <div class="chart">
+                <h3>De onde vem a receita</h3>
+                <div id="c-fonte"></div>
+            </div>
+            <div class="grid">
+                <div class="card s">
+                    <div class="num" id="ano"></div>
+                    <p>receita prevista no ano 1</p>
+                </div>
+                <div class="card s">
+                    <div class="num">mês 9</div>
+                    <p>ponto estimado de equilíbrio entre receita e custo mensal</p>
+                </div>
+            </div>
+        </section>
+    </main>
+    <div id="site-footer"></div>
+    <script src="script.js"></script>
+</body>
+
+</html>
