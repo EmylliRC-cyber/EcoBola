@@ -1162,3 +1162,18 @@ a.card h3 {
 .team .card p strong {
     color: var(--fg)
 }
+#steps .card:nth-child(8) svg.i {
+    color: #f97316
+}
+
+#steps .card:nth-child(9) svg.i {
+    color: #3b82f6
+}
+
+#steps .card p strong {
+    color: var(--fg)
+}
+
+#prod {
+    grid-template-columns: repeat(auto-fit, minmax(200px, 280px))
+}
