@@ -5,8 +5,14 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
     <title>Sobre – EcoBola</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@400;600;800&display=swap"
-        rel="stylesheet">
+        rel="stylesheet" media="print" onload="this.media='all'">
+    <noscript>
+        <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@400;600;800&display=swap"
+            rel="stylesheet">
+    </noscript>
     <link rel="stylesheet" href="style.css">
     <script>try { var t = localStorage.getItem("eb-theme"); if (t) document.documentElement.dataset.theme = t } catch (e) { }</script>
 </head>
@@ -65,10 +71,18 @@
                     <p>Pisos de academia seguem requisitos de absorção de impacto e testes de lixiviação.</p>
                 </div>
             </div>
+            <h2 class="sub">Documento do projeto</h2>
+            <div class="card s">
+                <h3>EcoBola (PDF)</h3>
+                <p>Documento com a triagem, o processo de produção, o processo específico para bolas e a estimativa de
+                    custos e faturamento.</p>
+                <a class="btn" href="EcoBola.pdf" target="_blank" rel="noopener">Abrir PDF</a><a class="btn o"
+                    href="EcoBola.pdf" download>Baixar</a>
+            </div>
         </section>
     </main>
     <div id="site-footer"></div>
-    <script src="script.js"></script>
+    <script src="script.js" defer></script>
 </body>
 
 </html>

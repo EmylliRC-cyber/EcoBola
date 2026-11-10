@@ -5,8 +5,14 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
     <title>Coleta – EcoBola</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@400;600;800&display=swap"
-        rel="stylesheet">
+        rel="stylesheet" media="print" onload="this.media='all'">
+    <noscript>
+        <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@400;600;800&display=swap"
+            rel="stylesheet">
+    </noscript>
     <link rel="stylesheet" href="style.css">
     <script>try { var t = localStorage.getItem("eb-theme"); if (t) document.documentElement.dataset.theme = t } catch (e) { }</script>
 </head>
@@ -73,7 +79,7 @@
                     <p>de basquete, futebol ou vôlei em cada m²</p>
                 </div>
                 <div class="card s">
-                    <div class="num">2.000 pneus</div>
+                    <div class="num">≈ 2.000 pneus</div>
                     <p>e 1.000 bolas por mês para produzir 1.000 m²</p>
                 </div>
             </div>
@@ -81,7 +87,7 @@
         </section>
     </main>
     <div id="site-footer"></div>
-    <script src="script.js"></script>
+    <script src="script.js" defer></script>
 </body>
 
 </html>

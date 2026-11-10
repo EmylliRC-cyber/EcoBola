@@ -19,7 +19,9 @@ var cn = document.querySelector("[data-n]"); if (cn) { var n = 0, t = setInterva
 var tb = $("#tg"); function lab() { var d = document.documentElement.dataset.theme == "dark"; tb.textContent = d ? "Modo claro" : "Modo escuro"; tb.setAttribute("aria-pressed", d) } lab();
 tb.onclick = function () { var d = document.documentElement, k = d.dataset.theme == "dark"; d.dataset.theme = k ? "light" : "dark"; try { localStorage.setItem("eb-theme", d.dataset.theme) } catch (e) { } lab() };
 if ($("#f")) $("#f").onsubmit = function (e) {
-    e.preventDefault(); var fd = new FormData(this), o = {}; fd.forEach(function (v, k) { o[k] = k == "mat" ? fd.getAll("mat").join(", ") : v }); var m = $("#msg");
-    if (ENDPOINT) { fetch(ENDPOINT, { method: "POST", headers: { "Content-Type": "application/json", Accept: "application/json" }, body: JSON.stringify(o) }).then(function (r) { m.textContent = r.ok ? "Enviado! Entraremos em contato em até 2 dias úteis." : "Não foi possível enviar. Tente de novo ou escreva para " + EMAIL }).catch(function () { m.textContent = "Falha de conexão. Escreva para " + EMAIL }) }
-    else { var b = "Tipo: " + o.tipo + "\nNome: " + o.nome + "\nE-mail: " + o.email + "\nTelefone: " + o.tel + "\nCidade: " + o.cidade + "\nMaterial: " + o.mat + "\nQuantidade: " + o.qtd + "\n" + o.obs; location.href = "mailto:" + EMAIL + "?subject=" + encodeURIComponent("EcoBola: " + o.tipo) + "&body=" + encodeURIComponent(b); m.textContent = "Abrimos seu e-mail com os dados preenchidos. Basta enviar." }
+    e.preventDefault(); $("#msg").textContent = "Formulário enviado!"; this.reset()
 };
+window.addEventListener("load", function () {
+    var go = function () { document.querySelectorAll("#nav a").forEach(function (a) { if (a.getAttribute("href") != cur) { var l = document.createElement("link"); l.rel = "prefetch"; l.href = a.getAttribute("href"); document.head.appendChild(l) } }) };
+    window.requestIdleCallback ? requestIdleCallback(go) : setTimeout(go, 500)
+});
